@@ -9,11 +9,11 @@ $fn=180;
 
 module body() {
     difference() {
-        cylinder(r1=45, r2=40, h=7); // Main body
-        cylinder(r1=40, r2=35, h=5); // Underside cut out
+        cylinder(r1=40, r2=45, h=7); // Main body
+        cylinder(r1=35, r2=40, h=5); // Underside cut out
 
         translate([0, 0, 6])
-        cylinder(r=13, h=1);
+        cylinder(r1=13, r2=14, h=1);
     }
 }
 
