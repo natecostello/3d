@@ -5,18 +5,21 @@
 // http://creativecommons.org/licenses/by-nc-sa/4.0/deed.en_US
 
 
-$fn=100;
+$fn=180;
 
 module body() {
     difference() {
         cylinder(r1=45, r2=40, h=7); // Main body
         cylinder(r1=40, r2=35, h=5); // Underside cut out
+
+        translate([0, 0, 6])
+        cylinder(r=13, h=1);
     }
 }
 
 module adapter() {
     cylinder(r=19, h=1);
-    cylinder(r=4.75, h=7);
+    cylinder(r=4.75, h=5);
 }
 
 difference() {
@@ -25,5 +28,5 @@ difference() {
         adapter();
     }
 
-    cylinder(r=3.75, h=30); // screw hole
+    cylinder(r=3.75, h=7); // screw hole
 }
