@@ -7,15 +7,11 @@
 
 $fn=180;
 
-module body() {
+difference() {
     difference() {
-        cylinder(r1=40, r2=45, h=7); // Main body
-        translate([0, 0, 6])
+        cylinder(r1=40, r2=45, h=8); // Main body
+        translate([0, 0, 7])
         cylinder(r1=13, r2=14, h=1);
     }
-}
-
-difference() {
-    body();
     cylinder(r=4, h=7); // screw hole
 }
