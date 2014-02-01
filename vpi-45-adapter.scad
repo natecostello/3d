@@ -19,5 +19,5 @@ module body() {
 
 difference() {
     body();
-    cylinder(r=3.75, h=7); // screw hole
+    cylinder(r=4, h=7); // screw hole
 }
