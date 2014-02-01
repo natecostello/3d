@@ -1,6 +1,8 @@
 // This is an adapter for a VPI record cleaner. The adapter is
 // used to hold 45s. Normally this thing costs $30. Print one instead!
-
+//
+// http://www.thingiverse.com/thing:239180
+//
 // This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
 // http://creativecommons.org/licenses/by-nc-sa/4.0/deed.en_US
 
