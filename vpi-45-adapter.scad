@@ -7,24 +7,23 @@
 
 $fn=100;
 
-module unit() {
-    cylinder(r1=45, r2=40, h=10); // Main body
-
-
+module body() {
     difference() {
-        translate([0, 0, 10])
-        cylinder(r1=25, r2=30, h=10); // Handle part
-
-        translate([0, 0, 17])
-        cylinder(r=13, h=13); // Cut out for vpi screw down
+        cylinder(r1=45, r2=40, h=7); // Main body
+        cylinder(r1=40, r2=35, h=5); // Underside cut out
     }
 }
 
+module adapter() {
+    cylinder(r=19, h=1);
+    cylinder(r=4.75, h=7);
+}
 
 difference() {
-    unit();
+    union() {
+        body();
+        adapter();
+    }
 
-    cylinder(r1=40, r2=35, h=4); // Underside cut out
-    
     cylinder(r=3.75, h=30); // screw hole
 }
