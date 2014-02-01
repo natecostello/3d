@@ -17,16 +17,7 @@ module body() {
     }
 }
 
-module adapter() {
-    cylinder(r=19, h=1);
-    cylinder(r=4.75, h=5);
-}
-
 difference() {
-    union() {
-        body();
-        adapter();
-    }
-
+    body();
     cylinder(r=3.75, h=7); // screw hole
 }
