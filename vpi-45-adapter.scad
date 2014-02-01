@@ -9,7 +9,7 @@ $fn=180;
 
 difference() {
     difference() {
-        cylinder(r1=40, r2=45, h=8); // Main body
+        cylinder(r1=45, r2=50, h=8); // Main body
         translate([0, 0, 7])
         cylinder(r1=13, r2=14, h=1);
     }
