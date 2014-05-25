@@ -1,4 +1,4 @@
-$fn=128;
+/* [Global] */
 
 // The height of the base
 base_height=5;
@@ -8,6 +8,9 @@ support_width=80;
 
 // The height of the support
 support_height=40;
+
+/* [Hidden] */
+$fn=128;
 
 translate([-5, -5, 0])
 cube([support_width+10, 50, base_height]);
