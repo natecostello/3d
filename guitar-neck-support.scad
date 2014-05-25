@@ -1,16 +1,23 @@
 $fn=128;
 
+// The height of the base
 base_height=5;
 
+// The width of the support
+support_width=80;
+
+// The height of the support
+support_height=40;
+
 translate([-5, -5, 0])
-cube([90, 50, base_height]);
+cube([support_width+10, 50, base_height]);
 
 translate([0, 0, base_height])
 difference() {
-  cube([80, 40, 40]);
+  cube([support_width, 40, support_height]);
 
-  translate([0, 0, 22])
+  translate([0, 0, support_height-18])
   rotate(a=[90,0,0])
-  linear_extrude(h=40, center=true, convexity=10, twist=0)
-  polygon(points=[[40,0], [80,20], [0,20]], paths=[[0,1,2]]);
+  linear_extrude(h=support_width/2, center=true, convexity=10, twist=0)
+  polygon(points=[[support_width/2,0], [support_width,20], [0,20]], paths=[[0,1,2]]);
 }
